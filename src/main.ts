@@ -1,5 +1,5 @@
 import { fromEvent, Observable } from "rxjs";
-import { throttleTime, map, scan } from "rxjs/operators";
+import { throttleTime, map, scan, subscribeOn } from "rxjs/operators";
 
 const button = document.querySelector("button");
 
@@ -65,6 +65,13 @@ Values
  *
  */
 
+const observer = {
+  next: (value: any) => {
+    console.log(value);
+  },
+};
+
+fromEvent(button, "click").subscribe(observer);
 // const observable = new Observable((subscriber) => {
 //   subscriber.next(1);
 //   subscriber.next(2);
@@ -74,3 +81,17 @@ Values
 //     subscriber.complete();
 //   }, 1000);
 // });
+
+// console.log("just before subscribe");
+// observable.subscribe({
+//   next(x) {
+//     console.log("got value " + x);
+//   },
+//   error(err) {
+//     console.error("something wrong occurred: " + err);
+//   },
+//   complete() {
+//     console.log("done");
+//   },
+// });
+// console.log("just after subscribe");

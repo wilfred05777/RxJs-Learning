@@ -9,13 +9,31 @@
         background-color: rgb(37, 37, 37);
       }
 
+      .canvas {
+        display: flex;
+        justify-content: center; /* Main Axis ----Horizontal ---- */
+        align-items: center; /* Corss Axis align-items | vertical*/
+        align-content: space-between;
+        background-color: azure;
+        padding: 20px;
+        margin: 0 auto;
+      }
       button {
+        padding: 10px;
+        margin: 10px;
         border: none;
+        border-style: double;
+      }
+      button:hover {
+        color: aqua;
       }
     </style>
   </head>
   <body>
-    <button>Click Me</button>
+    <div class="canvas">
+      <button>Click Me</button>
+      <button>Click Me</button>
+    </div>
     <div id="main"></div>
     <script src="./bundle.js"></script>
   </body>
