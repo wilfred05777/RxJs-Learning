@@ -57,3 +57,20 @@ Values
 //     scan((count, clientX) => count + clientX, 0)
 //   )
 //   .subscribe((count) => console.log(count));
+
+/**
+ *
+ * Observable https://rxjs.dev/guide/observable
+ * https://www.youtube.com/watch?v=Tux1nhBPl_w&list=PL55RiY5tL51pHpagYcrN9ubNLVXF8rGVi&index=2
+ *
+ */
+
+// const observable = new Observable((subscriber) => {
+//   subscriber.next(1);
+//   subscriber.next(2);
+//   subscriber.next(3);
+//   setTimeout(() => {
+//     subscriber.next(4);
+//     subscriber.complete();
+//   }, 1000);
+// });
